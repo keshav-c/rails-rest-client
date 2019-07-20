@@ -1,24 +1,19 @@
-# README
+# Sending Params with `RestClient`
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project involves interacting with a basic rails app, by sending parameters to it manually, from the **Command Line Interface**.
 
-Things you may want to cover:
+## Quiz
 
-* Ruby version
+1. On adding RESTful routes for the `users` resource, which routes are created?
 
-* System dependencies
+There are seven routes, corresponding to seven actions in the `users_controller`.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Prefix | Verb | URI | Controller#Action |
+| -----|-----|-----|----- |
+| users | GET | /users(.:format) | users#index |
+| new_user | GET | /users/new(.:format) | users#new |
+| users | POST | /users(.:format) | users#create |
+| edit_user | GET | /users/:id/edit(.:format) | users#edit |
+| user | PUT/PATCH | /users/:id(.:format) | users#update |
+| user | GET | /users/:id(.:format) | users#show |
+| user | DELETE | /users/:id(.:format) | users#destroy |
