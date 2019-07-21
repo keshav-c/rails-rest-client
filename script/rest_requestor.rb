@@ -4,14 +4,15 @@ url = "http://localhost:3000"
 inpt = gets.chomp
 case inpt
 when ""
-  request = url
+  puts RestClient.get(url)
 when "i"
-  request = "#{ url }/users"
+  puts RestClient.get("#{ url }/users")
 when "n"
-  request = "#{ url }/users/new"
+  puts RestClient.get("#{ url }/users/new")
 when "e"
-  request = "#{ url }/users/#{ rand(50) }/edit"
+  puts RestClient.get("#{ url }/users/#{ rand(50) }/edit")
 when "s"
-  request = "#{ url }/users/#{ rand(50) }"
+  puts RestClient.get("#{ url }/users/#{ rand(50) }")
+when "c"
+  puts RestClient.post("#{ url }/users", "")
 end
-puts RestClient.get (request)

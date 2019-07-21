@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     @name = "This is new action"
   end
 
+  def create
+  end
+
   def edit
     @name = "This is edit action"
   end
