@@ -10,8 +10,8 @@ when "i"
 when "n"
   request = "#{ url }/users/new"
 when "e"
-  request = "#{ url }/users/1/edit"
+  request = "#{ url }/users/#{ rand(50) }/edit"
 when "s"
-  request = "#{ url }/users/1"
+  request = "#{ url }/users/#{ rand(50) }"
 end
 puts RestClient.get (request)
