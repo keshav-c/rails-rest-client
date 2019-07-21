@@ -5,6 +5,8 @@ inpt = gets.chomp
 case inpt
 when ""
   request = url
+when "i"
+  request = "#{ url }/users"
 when "n"
   request = "#{ url }/users/new"
 when "e"
